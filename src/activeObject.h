@@ -29,6 +29,7 @@
 #define __ACTIVEOBJECT_H__
 
 #include "waitQueue.h"
+#include <functional>
 
 namespace condor2nav {
 
