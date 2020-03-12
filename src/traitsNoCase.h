@@ -31,6 +31,7 @@
 #include <string>
 #include <cctype>
 #include <cwctype>
+#include <istream>
 
 namespace condor2nav {
 
