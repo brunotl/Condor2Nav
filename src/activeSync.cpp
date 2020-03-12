@@ -28,10 +28,16 @@
 #include "activeSync.h"
 #include <memory>
 #include <algorithm>
-#include <rapi.h>
 #include <boost/filesystem.hpp>
 
 namespace {
+
+  typedef struct _RAPIINIT
+  {
+    DWORD cbSize;
+    HANDLE heRapiInit;
+    HRESULT hrRapiInit;
+  } RAPIINIT;
 
   // rapi.dll interface
   using FCeRapiInitEx = HRESULT(WINAPI*)(RAPIINIT *pRapiInit);
