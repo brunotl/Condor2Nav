@@ -66,7 +66,7 @@ void condor2nav::gui::CCondor2NavGUI::CLogger::Trace(const std::string &str) con
  * @param hDlg  Handle of the dialog. 
  */
 condor2nav::gui::CCondor2NavGUI::CCondor2NavGUI(HINSTANCE hInst, HWND hDlg) :
-  _condorPath{CCondor::InstallPath()},
+  _condorPath{condor::InstallPath()},
   _normal{CLogger::TType::LOG_NORMAL, hDlg},
   _high{CLogger::TType::LOG_HIGH, hDlg},
   _warning{CLogger::TType::WARNING, hDlg},
