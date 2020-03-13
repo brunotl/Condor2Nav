@@ -61,7 +61,7 @@ condor2nav::CIStream::CIStream(const bfs::path &fileName)
 condor2nav::CIStream::CIStream(const std::string &server, const bfs::path &url, unsigned timeout /* = 30 */)
 {
   boost::asio::ip::tcp::iostream http;
-  http.expires_from_now(boost::posix_time::seconds(timeout));
+  http.expires_from_now(std::chrono::seconds(timeout));
 
   // establish a connection to the server.
   http.connect(server, "http");
